@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-    "lib": ["ES2018", "DOM"] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+    "lib": [
+      "ES2018",
+      "DOM"
+    ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
     "module": "commonjs" /* Specify what module code is generated. */,
     "outDir": "./dist" /* Specify an output folder for all emitted files. */,
     "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
@@ -10,11 +13,11 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "baseUrl": "." /* Base directory to resolve non-absolute module names. */,
     "paths": {
-      "@/*": ["src/*"] /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
+      "@/*": ["src/*"] /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     }
   },
   "ts-node": {
-    "require": ["tsconfig-paths/register"] /* Specify an array of 'ts-node' options. */,
+    "require": ["tsconfig-paths/register"] /* Specify an array of 'ts-node' options. */
   },
-  "include": ["src/**/*"] /* Specify an array of 'glob' patterns that match files to include. */,
+  "exclude": ["node_modules", "dist", "spec"] /* Exclude files from compilation. */
 }
