@@ -7,6 +7,16 @@ imageRouter.use(async (req: Request, res: Response, next: NextFunction) => {
   const query = req.query
   const { filename, width, height } = query
 
+  if (!filename) {
+    res.status(400).send('filename parameter is required')
+  }
+  if (!width) {
+    res.status(400).send('width parameter is required')
+  }
+  if (!height) {
+    res.status(400).send('height parameter is required')
+  }
+
   const imageWidth = parseInt(width as string, 10)
   if (!isValidImageSize(imageWidth)) {
     res.status(400).send('Invalid width')
